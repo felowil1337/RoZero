@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trans-Klassen — RO Zero Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-title">Ragnarok Zero</span>
+      <span class="brand-subtitle">Global Guide · Deutsch</span>
+    </a>
+    <nav class="topbar-links">
+      <a href="index.html">Start</a>
+      <a href="klassen.html" class="">Klassen</a>
+      <a href="leveling.html" class="">Leveln</a>
+      <a href="instanzen.html" class="">Instanzen</a>
+      <a href="fever.html" class="">Fever</a>
+      <a href="ausruestung.html" class="">Ausrüstung</a>
+      <a href="zukunft.html" class="future active">Zukunft</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li class="nav-group-label info">Start</li>
+        <li><a href="index.html" class=""><span class="emoji">📘</span>Einführung</a></li>
+        <li><a href="auto-hunt.html"><span class="emoji">🤖</span>Auto-Hunt &amp; Auto-Pot</a></li>
+        <li><a href="taiwan.html" class=""><span class="emoji">🇹🇼</span>Taiwan-Version</a></li>
+
+        <li class="nav-group-label now">Aktuell spielbar</li>
+        <li><a href="klassen.html" class=""><span class="emoji">⚔️</span>Klassen (1./2. Job)</a></li>
+        <li><a href="leveling.html" class=""><span class="emoji">📈</span>Level-Routen</a></li>
+        <li><a href="instanzen.html" class=""><span class="emoji">🏰</span>Memorial-Dungeons</a></li>
+        <li><a href="fever.html" class=""><span class="emoji">🔥</span>Fever-Felder</a></li>
+        <li><a href="optionen.html" class=""><span class="emoji">🎲</span>Zufalls-Optionen</a></li>
+        <li><a href="ausruestung.html" class=""><span class="emoji">🛡️</span>Ausrüstung</a></li>
+        <li><a href="npc.html" class=""><span class="emoji">💰</span>NPC-Händler</a></li>
+
+        <li class="nav-group-label future">Zukunfts-Updates</li>
+        <li><a href="zukunft.html" class=""><span class="emoji">🔮</span>Übersicht</a></li>
+        <li><a href="trans-klassen.html" class=" active future-page"><span class="emoji">⚡</span>Trans-Klassen</a></li>
+        <li><a href="high-instanzen.html" class=""><span class="emoji">🏰</span>High-Lv Instanzen</a></li>
+        <li><a href="endgame-ausruestung.html" class=""><span class="emoji">🛡️</span>Endgame-Ausrüstung</a></li>
+        <li><a href="stern-grade.html" class=""><span class="emoji">⭐</span>Stern-Grade-System</a></li>
+        <li><a href="endgame-npc.html" class=""><span class="emoji">💰</span>Endgame-Währungen</a></li>
+
+        <li class="nav-group-label info">Links</li>
+        <li><a href="quellen.html" class=""><span class="emoji">🔗</span>Quellen</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="page-hero future">
+      <span class="eyebrow">Zukunft · Rebirth</span>
+      <h1>Trans-Klassen (Rebirth)</h1>
+      <p class="lead">Alle 16 Transcendent-Klassen mit Tier-List, Signature-Skills (Asura Strike, Acid Bomb etc.) und Build-Pitfalls.</p>
+    </div>
+
+    <section>
+      <h2>⚡ Trans-Klassen (Rebirth) — Übersicht</h2>
+      <p>Trans-Klassen sind der nächste Progression-Schritt nach dem 2. Job. Der <strong>Rebirth-Prozess</strong> bei Valkyrie setzt den Charakter zurück auf Novice, der dann den Trans-Tech-Tree durchläuft und bei Max auf die jeweilige Trans-Klasse wechselt.</p>
+
+      <div class="info-box warning">
+        <strong>TW-Stand:</strong> Rebirth/Trans ist auf TWRoZ <em>noch nicht verfügbar</em>. Für Global wird es voraussichtlich als erster großer Content-Patch nach dem 2. Job-Rollout kommen.
+      </div>
+
+      <ul>
+        <li><strong>Cap:</strong> Base 120 / Job 70</li>
+        <li><strong>Prereq:</strong> Rebirth-Quest ab Base 99 · Trans-EXP-Kurve steiler als normal</li>
+        <li><strong>Rebirth-NPC:</strong> Valkyrie in <code>valkyrie</code> (Warp ab Prontera Kafra)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📊 Tier-List (Zero-Meta 2024–2026)</h2>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Klasse</th><th>PvE / Farm</th><th>PvP</th><th>WoE</th><th>MVP-Hunt</th></tr></thead>
+        <tbody>
+          <tr><td>Lord Knight</td><td>A</td><td>B</td><td>A</td><td><strong>S</strong> (Spiral Pierce)</td></tr>
+          <tr><td>Paladin</td><td>B</td><td>A</td><td><strong>S</strong></td><td>C</td></tr>
+          <tr><td>High Priest</td><td>A</td><td>A (ME)</td><td><strong>S</strong> (Support)</td><td>B (ME-Undead)</td></tr>
+          <tr><td>Assassin Cross</td><td><strong>S</strong> (SBK)</td><td><strong>S</strong></td><td>A</td><td><strong>S</strong></td></tr>
+          <tr><td>Stalker</td><td>C</td><td>A (Full Strip)</td><td>A</td><td>C</td></tr>
+          <tr><td>Sniper</td><td><strong>S</strong></td><td>A</td><td>A</td><td>A</td></tr>
+          <tr><td>Gypsy</td><td>C</td><td>A</td><td><strong>S</strong> (Tarot/Scream)</td><td>C</td></tr>
+          <tr><td>Clown</td><td>C</td><td>A</td><td><strong>S</strong> (Bragi)</td><td>C</td></tr>
+          <tr><td>High Wizard</td><td><strong>S</strong></td><td>B</td><td>A (SG/MS)</td><td>A</td></tr>
+          <tr><td>Professor</td><td>B</td><td><strong>S</strong> (Soul Burn)</td><td><strong>S</strong> (Anti-Caster)</td><td>C</td></tr>
+          <tr><td>Whitesmith</td><td><strong>S</strong> (Cart Term.)</td><td>B</td><td>C</td><td>A</td></tr>
+          <tr><td>Creator</td><td>A</td><td>A</td><td>A</td><td><strong>S</strong> (Acid Bomb)</td></tr>
+          <tr><td>Champion</td><td><strong>S</strong> (Asura)</td><td><strong>S</strong></td><td>A</td><td><strong>S</strong></td></tr>
+          <tr><td>Rebellion</td><td>A</td><td>A</td><td>B</td><td>A</td></tr>
+          <tr><td>Kagerou / Oboro</td><td>A</td><td>A</td><td>B</td><td>B</td></tr>
+          <tr><td>Super Novice</td><td>B</td><td>C</td><td>C</td><td>C</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>👊 Champion — Asura Strike (Signature-Skill)</h2>
+      <div class="card future">
+        <h4>Asura Strike — Single-Target-Burst, MVP-Finisher</h4>
+        <p><strong>Formel:</strong> <code>ATK × (8 + SP/10) + 250 + 150 × SkillLv</code></p>
+        <p><strong>SP-Cap: 6000</strong> — Damage skaliert nur bis zu diesem Wert. Mehr SP stacken ist verschwendet!</p>
+        <p><strong>Prereqs:</strong> Explosion Spirits 3 + Finger Offensive 3 + alle 5 Spirit Spheres</p>
+        <p><strong>Combo-Loop:</strong> Fury → Critical Explosion → Asura Strike</p>
+        <p><strong>TWRoZ-Tipp:</strong> <em>Dangerous Soul Collect</em> (Quest-Skill) beschwört alle 5 Spheres instant. NIE manuell Spheres in BOSS-Fights summonen!</p>
+        <p><strong>Stats:</strong> STR 99 · INT 70–80 · DEX 50–60 · VIT Rest</p>
+        <p><strong>Skills:</strong> Asura Strike Lv 10, Mental Sensing Lv 5 (DEF/MDEF auf 90)</p>
+        <p><strong>Gear:</strong> Eden Mace III → Stunner [2] + Abysmal Knight Card · Shadow Monk Glove · <strong>Spiritual Ring</strong> (BiS-Accessoire) · Sohee Card Shoes (+15% Max SP) · Morpheus Set (SP + INT)</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚗️ Creator — Acid Bomb (Signature-Skill)</h2>
+      <div class="card future">
+        <h4>Acid Bomb / Acid Demonstration — MVP-Killer</h4>
+        <p><strong>Skaliert mit:</strong> INT × Target-VIT × Base-Level — der höchste VIT beim Ziel, desto höher dein Schaden</p>
+        <p><strong>Verbrauch pro Cast:</strong> 1× Acid Bottle + 1× Bottle Grenade (selbst-gebraut oder gekauft)</p>
+        <p><strong>Stats:</strong> INT 99 · DEX 60 · VIT Rest (NICHT pure INT — etwas VIT + Survival ist besser)</p>
+        <p><strong>Build-Fehler:</strong> Pure INT klingt logisch, aber AD skaliert nicht nur mit INT. Etwas VIT + Gear-Survival ist oft die bessere Wahl für High-VIT-MVPs</p>
+        <p><strong>Gear-Loop:</strong> Acid Bottle + Bottle Grenade Herstellung via <em>Pharmacy</em>-Skill (Lv 10), Materialien farmen oder Mora-Coins für Vendor-Pack</p>
+        <p><strong>Homunculus:</strong> Vanilmirth empfohlen — tankt während du Acid Bomb spammst</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🗡️ Weitere Signature-Skills der Trans-Klassen</h2>
+
+      <h3>Lord Knight</h3>
+      <ul>
+        <li><strong>Spiral Pierce Lv 10</strong> — Damage ist <em>WEIGHT-SCALED</em>. Pike-Tier-Waffen haben wenig DPS — <strong>schwere Spears wie Marlin Spear</strong> sind BiS</li>
+        <li>Concentration · Tension Relax · Joint Beat</li>
+        <li>Conqueror 2H-Spear mit STR/Crit-Enchants = Endgame</li>
+      </ul>
+
+      <h3>Paladin</h3>
+      <ul>
+        <li><strong>Sacrifice + Devotion</strong> — WoE-Backbone</li>
+        <li>Shield Chain / Shield Boomerang für PvE-Bursts</li>
+        <li>Gospel: Party-Buff</li>
+      </ul>
+
+      <h3>High Priest</h3>
+      <ul>
+        <li><strong>Assumptio Lv 5</strong> — 75% DEF/MDEF-Buff-Staple</li>
+        <li><strong>Magnus Exorcismus Lv 10</strong> — Holy-Nuke · <strong>5-Wave-Cap</strong> pro Target (3s Immunity)</li>
+        <li>Resurrection · Suffragium · Mana Recharge</li>
+      </ul>
+
+      <h3>Assassin Cross</h3>
+      <ul>
+        <li><strong>Soul Breaker (Soul Destroyer)</strong> — Hybrid INT + STR, ignoriert Accuracy</li>
+        <li>Enchant Deadly Poison + Meteor Assault</li>
+        <li>Advanced Katar Mastery</li>
+      </ul>
+
+      <h3>Stalker</h3>
+      <ul>
+        <li><strong>Preserve + Reproduce</strong> — kopiert jeden 2nd-Class-Damage-Skill (Storm Gust, Asura etc.)</li>
+        <li>Full Strip + Close Confine</li>
+        <li>Pitfall: Reproduce mit low-Tier-Skills = wasted — immer Storm Gust oder Asura vor Fights kopieren</li>
+      </ul>
+
+      <h3>Sniper</h3>
+      <ul>
+        <li><strong>Sharp Shooting</strong> — 5×5 AoE um Target, 100% Crit</li>
+        <li>Wind Walk (Party-ASPD/Flee) · True Sight</li>
+        <li>Falcon Assault</li>
+        <li>Pitfall: Wind Walk / True Sight NICHT skippen — definieren Party-Wert</li>
+      </ul>
+
+      <h3>Gypsy / Clown</h3>
+      <ul>
+        <li><strong>Tarot Card of Fate</strong> (Gypsy) — Random Debuff inkl. Coma</li>
+        <li><strong>A Poem of Bragi</strong> (Clown) — VCT + After-Cast-Reduction für Party</li>
+        <li>Scream (Gypsy) · Assassin Cross of Sunset</li>
+      </ul>
+
+      <h3>High Wizard</h3>
+      <ul>
+        <li><strong>Storm Gust Lv 10</strong> — 120% MATK Lv1 → 570% MATK Lv10 · Lv10 hat <em>NIEDRIGERE</em> Freeze-Rate, aber mehr Damage</li>
+        <li><strong>Mystical Amplification</strong> — MATK-Boost für nächsten Spell</li>
+        <li>Lord of Vermilion (8s CD) · Meteor Storm · Ganbantein</li>
+      </ul>
+
+      <h3>Professor</h3>
+      <ul>
+        <li><strong>Soul Burn / Soul Siphon</strong> — löscht gegnerisches SP (Hard-Counter gegen Champion/Wizard)</li>
+        <li>Spider Web + Fire Bolt (verdoppelt Damage auf Web-Target)</li>
+        <li>Land Protector (Anti-Precast)</li>
+      </ul>
+
+      <h3>Whitesmith</h3>
+      <ul>
+        <li><strong>Cart Termination</strong> — Damage skaliert mit Cart-Weight, 186 ASPD-Cap</li>
+        <li>Meltdown (Boss-Gear-Break → Party-Damage-Uplift)</li>
+        <li>Mammonite Lv 10: 900z/Cast mit Unfair Trick</li>
+      </ul>
+
+      <h3>Rebellion</h3>
+      <ul>
+        <li><strong>Round Trip</strong> — 13×13 AoE, 2500% Mod</li>
+        <li><strong>Slug Shot</strong> — ~9000% Mod (Finisher)</li>
+        <li><strong>Hit Barrel</strong> — konsumiert Coins → +16% ATK/Coin, +5 ASPD</li>
+        <li>Crimson Marker + Quick Draw Shot</li>
+      </ul>
+
+      <h3>Kagerou / Oboro</h3>
+      <ul>
+        <li><strong>Kunai Explosion</strong> — DEX + Dagger Throwing Practice + Base/Job-Scaling</li>
+        <li>Magic-Build: 100 INT/VIT/DEX + 16th Night Lv 3 + Pure Soul</li>
+        <li>Mirror Image · Illusion Shadow</li>
+      </ul>
+
+      <h3>Super Novice</h3>
+      <ul>
+        <li>Expanded-Variante auf Zero (Job-Lv 70 Cap)</li>
+        <li>Kann 2nd-Class-Skills borgen</li>
+        <li>Stuck mit Novice-HP/SP-Tier-Basis — Novelty/Solo-Fun-Pick</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🚫 Top-5 Trans-Build-Pitfalls (Zero-spezifisch)</h2>
+      <ol>
+        <li><strong>Champion: SP über 6000 stacken</strong> — Asura-Cap, alles drüber verschwendet. Tune INT/SP-Gear exakt auf 6000 SP</li>
+        <li><strong>Lord Knight: Spiral Pierce mit leichten Waffen</strong> — Damage ist weight-scaled. Pike-Tier ≠ Marlin Spear</li>
+        <li><strong>Pure-INT Creator</strong> — AD scales mit Target-VIT × Base-Level, nicht nur INT. Glass-Cannon-INT-Stacking underperformt</li>
+        <li><strong>Sniper skipt Wind Walk / True Sight</strong> — beide definieren Party-Wert + Sharp-Shooting-Konsistenz</li>
+        <li><strong>Reproduce-Stalker kopiert low-Tier-Skills</strong> — Meta: Storm Gust oder Asura vor Fights kopieren</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>🔗 Skill-Simulator</h2>
+      <p>Für detaillierte Build-Planung nutze <strong><a href="https://www.rozskill.me/" target="_blank">rozskill.me</a></strong> — englischer Skill-Simulator für alle 16 Trans-Klassen, mit URL-basiertem Build-Sharing. Die Seite deckt ~435 Skills ab und bietet Skill-Tooltips auf Englisch und Koreanisch.</p>
+
+      <div class="card-grid">
+        <div class="card future">
+          <h4>Sword-Path</h4>
+          <p><a href="https://www.rozskill.me/lord-knight" target="_blank">Lord Knight</a> · <a href="https://www.rozskill.me/paladin" target="_blank">Paladin</a></p>
+        </div>
+        <div class="card future">
+          <h4>Mage-Path</h4>
+          <p><a href="https://www.rozskill.me/high-wizard" target="_blank">High Wizard</a> · <a href="https://www.rozskill.me/professor" target="_blank">Professor</a></p>
+        </div>
+        <div class="card future">
+          <h4>Archer-Path</h4>
+          <p><a href="https://www.rozskill.me/sniper" target="_blank">Sniper</a> · <a href="https://www.rozskill.me/clown" target="_blank">Clown</a> · <a href="https://www.rozskill.me/gypsy" target="_blank">Gypsy</a></p>
+        </div>
+        <div class="card future">
+          <h4>Acolyte-Path</h4>
+          <p><a href="https://www.rozskill.me/high-priest" target="_blank">High Priest</a> · <a href="https://www.rozskill.me/champion" target="_blank">Champion</a></p>
+        </div>
+        <div class="card future">
+          <h4>Thief-Path</h4>
+          <p><a href="https://www.rozskill.me/assassin-cross" target="_blank">Assassin Cross</a> · <a href="https://www.rozskill.me/stalker" target="_blank">Stalker</a></p>
+        </div>
+        <div class="card future">
+          <h4>Merchant-Path</h4>
+          <p><a href="https://www.rozskill.me/whitesmith" target="_blank">Whitesmith</a> · <a href="https://www.rozskill.me/creator" target="_blank">Creator</a></p>
+        </div>
+        <div class="card future">
+          <h4>Special</h4>
+          <p><a href="https://www.rozskill.me/rebellion" target="_blank">Rebellion</a> · <a href="https://www.rozskill.me/kagerou" target="_blank">Kagerou</a> · <a href="https://www.rozskill.me/oboro" target="_blank">Oboro</a> · <a href="https://www.rozskill.me/super-novice" target="_blank">Super Novice</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  Quellen: <a href="https://www.midgardhub.com/" target="_blank">Midgard Hub</a> · <a href="https://old.criatura-academy.com/" target="_blank">Criatura Academy</a> · <a href="https://wiki.playragnarokzero.com/" target="_blank">Project Zero Wiki</a> · <a href="https://www.rozskill.me/" target="_blank">rozskill.me</a>
+</footer>
+
+</body>
+</html>

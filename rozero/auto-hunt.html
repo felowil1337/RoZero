@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto-Hunt & Auto-Pot — RO Zero Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-title">Ragnarok Zero</span>
+      <span class="brand-subtitle">Global Guide · Deutsch</span>
+    </a>
+    <nav class="topbar-links">
+      <a href="index.html" class="active">Start</a>
+      <a href="klassen.html" class="">Klassen</a>
+      <a href="leveling.html" class="">Leveln</a>
+      <a href="instanzen.html" class="">Instanzen</a>
+      <a href="fever.html" class="">Fever</a>
+      <a href="ausruestung.html" class="">Ausrüstung</a>
+      <a href="zukunft.html" class="future">Zukunft</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li class="nav-group-label info">Start</li>
+        <li><a href="index.html" class=""><span class="emoji">📘</span>Einführung</a></li>
+        <li><a href="auto-hunt.html"><span class="emoji">🤖</span>Auto-Hunt &amp; Auto-Pot</a></li>
+        <li><a href="taiwan.html" class=""><span class="emoji">🇹🇼</span>Taiwan-Version</a></li>
+
+        <li class="nav-group-label now">Aktuell spielbar</li>
+        <li><a href="klassen.html" class=""><span class="emoji">⚔️</span>Klassen (1./2. Job)</a></li>
+        <li><a href="leveling.html" class=""><span class="emoji">📈</span>Level-Routen</a></li>
+        <li><a href="instanzen.html" class=""><span class="emoji">🏰</span>Memorial-Dungeons</a></li>
+        <li><a href="fever.html" class=""><span class="emoji">🔥</span>Fever-Felder</a></li>
+        <li><a href="optionen.html" class=""><span class="emoji">🎲</span>Zufalls-Optionen</a></li>
+        <li><a href="ausruestung.html" class=""><span class="emoji">🛡️</span>Ausrüstung</a></li>
+        <li><a href="npc.html" class=""><span class="emoji">💰</span>NPC-Händler</a></li>
+
+        <li class="nav-group-label future">Zukunfts-Updates</li>
+        <li><a href="zukunft.html" class=""><span class="emoji">🔮</span>Übersicht</a></li>
+        <li><a href="trans-klassen.html" class=""><span class="emoji">⚡</span>Trans-Klassen</a></li>
+        <li><a href="high-instanzen.html" class=""><span class="emoji">🏰</span>High-Lv Instanzen</a></li>
+        <li><a href="endgame-ausruestung.html" class=""><span class="emoji">🛡️</span>Endgame-Ausrüstung</a></li>
+        <li><a href="stern-grade.html" class=""><span class="emoji">⭐</span>Stern-Grade-System</a></li>
+        <li><a href="endgame-npc.html" class=""><span class="emoji">💰</span>Endgame-Währungen</a></li>
+
+        <li class="nav-group-label info">Links</li>
+        <li><a href="quellen.html" class=""><span class="emoji">🔗</span>Quellen</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="page-hero">
+      <span class="eyebrow">Zero-QoL · Aktuell spielbar</span>
+      <h1>Auto-Hunt (內掛) & Auto-Pot</h1>
+      <p class="lead">Wie das TW-exklusive Auto-Combat-System funktioniert — und warum es einen richtigen Auto-Pot-Threshold (noch) nicht gibt.</p>
+    </div>
+
+    <section>
+      <h2>🤖 Auto-Hunt (內掛) & Auto-Pot-Situation</h2>
+      <p>Das <strong>Auto-Hunt-System (內掛)</strong> ist das zentrale QoL-Feature der TW-Version und wird aller Voraussicht nach auch auf Global so übernommen. Dieser Abschnitt dokumentiert den aktuellen Stand (Stand: April 2026, nach dem März-24-Patch) und räumt vor allem mit einem Missverständnis auf: <strong>einen klassischen „Auto-Pot"-Threshold gibt es (noch) nicht.</strong></p>
+    </section>
+
+    <section>
+      <h2>⚙️ Auto-Hunt Grundmechanik</h2>
+
+      <h3>Kapazität (nach März-2026-Patch)</h3>
+      <ul>
+        <li><strong>8 Angriffs-Skill-Slots</strong> (vorher 4) — hier trägst du deine Damage-Skills ein</li>
+        <li><strong>8 Support-Skill-Slots</strong> (vorher 4) — Buffs, Heals, Pot-Timings</li>
+        <li><strong>Auto-Cast + Auto-Shadow-Cast</strong> — werden unterstützt für Support-Skills</li>
+        <li><strong>Combo/Chain-Settings</strong> (自訂連招) — eigene Skill-Reihenfolgen</li>
+        <li><strong>Normal-Attack-Toggle</strong> — kann an- oder abgeschaltet werden (wichtig z.B. für Alchemisten mit Homunculus)</li>
+      </ul>
+
+      <h3>Was du konfigurieren kannst</h3>
+      <ul>
+        <li>Skill-Delay zwischen Aktionen</li>
+        <li>Pickup-Delay</li>
+        <li>Drink-Delay (Wasserkonsum-Pause, nicht HP/SP-Threshold!)</li>
+        <li>Auto-Hunt-Flow (Ablauf-Reihenfolge)</li>
+        <li>Map-Freischaltung (manche Maps sind standardmäßig für Auto-Hunt gesperrt)</li>
+      </ul>
+
+      <h3>Was du NICHT konfigurieren kannst (C++-hardcoded)</h3>
+      <div class="info-box warning">
+        Die Kern-Logik läuft in C++ (Performance-Optimierung wegen Server-Load) und ist Spielern nicht zugänglich:
+      </div>
+      <ul>
+        <li><strong>Erkennungs-Reichweite:</strong> nur ca. <strong>7–8 Zellen</strong> um den Charakter. Monster weiter weg werden komplett ignoriert</li>
+        <li><strong>Erkennungs-Frequenz:</strong> fest limitiert</li>
+        <li><strong>Target-Priorität:</strong> greift <strong>immer das nächste Ziel</strong> an — keine Prioritätsliste, keine Ignore-Liste, keine Elemental-Priorisierung</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💊 Auto-Pot-System</h2>
+
+      <div class="info-box note">
+        Auto-Pot ist <strong>in dasselbe Auto-Hunt-Fenster integriert</strong> — kein separates System, sondern ein Tab/Bereich innerhalb der 內掛-Konfiguration.
+      </div>
+
+      <h3>Konfiguration</h3>
+      <ul>
+        <li>Eigene Slots für <strong>HP-Potions</strong> und <strong>SP-Potions</strong></li>
+        <li>UI zeigt die aktuellen Potion-Icons mit Restmenge im Inventar</li>
+        <li><strong>Threshold-basiert:</strong> Vermutlich %HP- und %SP-Slider (exakte UI-Elemente aus öffentlichen Quellen nicht 1:1 dokumentiert)</li>
+        <li>Pot-Trigger läuft parallel zum Support-Skill-Engine (Buff-Refresh + Heal-on-Party-Member)</li>
+      </ul>
+
+      <h3>Unterstützte Items</h3>
+      <ul>
+        <li><strong>HP:</strong> Red / Orange / Yellow / White Potions, Condensed White, Royal Jelly (蜂王乳)</li>
+        <li><strong>SP:</strong> Blue Potion, Grape Juice, Mastela Fruit</li>
+        <li><em>Yggdrasil Berry / Leaf</em> als Emergency-Items → aus öffentlichen Quellen nicht bestätigt</li>
+      </ul>
+
+      <h3>🐛 Kritischer Bug — Return-to-Town</h3>
+      <div class="info-box warning">
+        <strong>Auto-Return-to-Town feuert erst wenn BEIDE — HP- UND SP-Pot-Stacks — komplett leer sind.</strong> Wenn HP-Pots aus, SP-Pots aber noch da: der Char kämpft weiter ohne Heal-Option → stirbt im nächsten Hit. <strong>Standard-Community-Empfehlung: Death-Return-Checkbox AKTIVIEREN</strong> (nicht Resurrection auf Swordsman Village — dort greifen trollen-Priester das ab).
+      </div>
+
+      <h3>Bekannte Einschränkungen</h3>
+      <ul>
+        <li><strong>Config-Reset-Bug:</strong> Änderungen während einer Session können bei Disconnect verloren gehen. Erst nach Rückkehr zum Char-Select sind sie persistent.</li>
+        <li><strong>Pot-Count-UI-Bug:</strong> Anzahl-Anzeige kann leer wirken, obwohl Items noch im Inventar sind.</li>
+        <li><strong>Kein automatisches Restock:</strong> Pot-Verbrauch auffüllen = manuelles Town-Runnen und NPC-Kauf.</li>
+        <li><strong>Standard-Potion-Global-Cooldown (~1s)</strong> gilt — kein Umgehen.</li>
+        <li><strong>Multi-Threshold-Stacking</strong> (z.B. White Pot @ 50% + Royal Jelly @ 20%) aus Quellen nicht bestätigt — wahrscheinlich möglich, aber nicht verifiziert.</li>
+      </ul>
+
+      <h3>Weitere Sustain-Optionen parallel zum Auto-Pot</h3>
+      <ol>
+        <li><strong>Pots als Support-Skills timen</strong> — Du kannst Potions zusätzlich in die 8 Support-Skill-Slots mit festem Intervall legen (z.B. "Condensed White alle 5 Sek"). Zeit-basiert, nicht HP-basiert.</li>
+        <li><strong>Passive Regen-Gear:</strong> Eden Group Boots (+10–14% HP-Regen), Zero Beetle Card (SP-Regen-on-Kill), Spiritual Ring, Shadow-Priest-Shoes</li>
+        <li><strong>Klassen-spezifische SP-Sustain-Builds:</strong> Knight "Pierce Machine" (INT 40-60), Priest mit Magnificat Lv 5 (Party-SP-Regen x2)</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>🖼️ UI-Struktur (rekonstruiert aus Forum-Beschreibungen)</h2>
+      <ul>
+        <li><strong>Multi-Tab-Fenster</strong> mit mehreren Seiten</li>
+        <li><strong>Seite 1:</strong> Resurrection-Count-Checkbox, Death-Return-Toggle, Weight-/Supply-Cutoffs, Pot-Slots</li>
+        <li><strong>Attack-Skills-Tab:</strong> 8 Slots, pro Skill konfigurierbar: Skill-Level, Delay zwischen Casts, Max-Casts pro Target, per-Mob-Binding</li>
+        <li><strong>Support-Skills-Tab:</strong> 8 Slots, Auto-Cast + Auto-Shadow-Cast Toggles</li>
+        <li><strong>Per-Monster-Targeting-Tab:</strong> Skill → Mob-Name-Bindings</li>
+        <li><strong>Import/Export:</strong> Config als Datei teilbar mit anderen Spielern</li>
+      </ul>
+
+      <div class="info-box note">
+        <strong>Aktivierung:</strong> Öffnen des Auto-Hunt-Fensters im Client (kein öffentlich dokumentierter Slash-Command). Die Community nennt es "自動戰鬥"-Fenster. Für exakte Button-/Hotkey-Position → TW-YouTube-Tutorial ansehen (z.B. "軒老 內掛設定全指南" oder "阿翊 自動戰鬥設定教學").
+      </div>
+    </section>
+
+      <h3>Class-spezifische Tricks für HP/SP-Sustain</h3>
+      <ul>
+        <li><strong>Knight:</strong> „Pierce Machine"-Build mit INT 40–60 → regeneriert SP schnell genug um Pierce dauerhaft zu spammen. <em>Zero Beetle Card</em> (SP-Regen-on-Kill) ist der Gamechanger</li>
+        <li><strong>Priest:</strong> Magnificat Lv 5 als eigenen Support-Buff → verdoppelt SP-Regen, Heal als Auto-Cast</li>
+        <li><strong>Monk:</strong> Asura nicht auto-hunt-tauglich (manuelles Timing nötig); Combo-Logik ist fehlerhaft und ignoriert Spirit-Sphere-Count</li>
+        <li><strong>Alchemist:</strong> Cart-Attack-Skill-Slot auf <strong>999 Sek</strong> setzen = effektiv deaktiviert, sodass nur Homunculus farmt</li>
+        <li><strong>Wizard:</strong> Bekannter Bug — nach Single-Skill-Trigger (z.B. Ganbantein) werden Items manchmal nicht aufgehoben</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🎯 Target-Handling Detail</h2>
+      <ul>
+        <li><strong>Nearest-Target-Only:</strong> Bei mehreren Mobs in Reichweite wird immer der nächstgelegene angegriffen. Kein User-Override</li>
+        <li><strong>Off-Screen-Ignoranz:</strong> Homunculus erkennt Mobs außerhalb der Player-Reichweite (teilweise auch off-screen), Auto-Hunt aber nur 7–8 Zellen. Das führt dazu, dass Homunculus „Gassi geführt" wird — der Player läuft in Homunculus-Richtung, sieht aber selbst die Mobs nicht</li>
+        <li><strong>Nach-Kill-Pause:</strong> Häufige Player-Complaint — nach Kill steht der Char oft 1–2 Sekunden bevor nächstes Target aufgenommen wird. Wird als „inaktiv-wirkend" wahrgenommen</li>
+        <li><strong>Search-Walk:</strong> Wenn kein Target in Reichweite, bewegt sich der Char in Zufalls-Richtung (wie ein Gassi-Hund) — kein Pfad-Algorithmus</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🛡️ PvP & Map-Restriktionen</h2>
+      <ul>
+        <li><strong>PvP-Maps:</strong> Auto-Hunt ist dort deaktiviert (April-2026-Patch) — zusätzlich wurden Fly Wing + Teleport in PvP-Maps geblockt</li>
+        <li><strong>Bestimmte Endgame-Maps:</strong> Standard für Auto-Hunt gesperrt (Unlock via NPC-Items möglich)</li>
+        <li><strong>Instanzen:</strong> Auto-Hunt funktioniert innerhalb von Memorial-Dungeons, aber Boss-Mechaniken (Reflect Shield, Shaman's Flowers etc.) werden ignoriert — oft resultiert in Wipes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💀 Death-Handling</h2>
+      <ul>
+        <li>Bei Tod: Keine automatische Respawn-Aktion — der Char bleibt am Death-Screen bis Player manuell eingreift</li>
+        <li>Kein automatisches Gear-Repair / Potion-Restock in Town</li>
+        <li>Keine automatische EXP-Penalty-Recovery</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔄 Wie du trotzdem länger AFK-farmst</h2>
+      <ol>
+        <li><strong>Multi-Char-Setup:</strong> TW erlaubt 5 Accounts/ID. Einen Support-Priester im Party-Slot mit <em>Magnificat</em> und <em>Blessing</em> auf Timer → dein Farm-Char bleibt oben</li>
+        <li><strong>Pot-Preloading:</strong> Inventar voller Red Potions + Blue Potions + Orange Potions. Support-Slots mit Staffel-Timern (z.B. Red 3s, Orange 7s, Blue 5s). Bei rotierendem Trinken reicht oft 2–4 Stunden</li>
+        <li><strong>Gear-Priorität:</strong> HP-Regen-Items (Eden Group Boots: +10–14% HP-Regen, Shadow Merchant Armor-Varianten) sind entscheidend</li>
+        <li><strong>Farming-Spot-Auswahl:</strong> Maps wählen, wo Mobs nicht schneller Damage machen als dein Regen. Siehe <a href="leveling.html">Level-Routen</a> und <a href="fever.html">Fever-Felder</a></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>📊 March-2026-Patch — Was sich geändert hat</h2>
+      <div class="info-box note">
+        Offizielle Ankündigung von 24.03.2026 (TWRoZ Wartung):
+      </div>
+      <ul>
+        <li>Attack-Skill-Slot-Limit auf <strong>8</strong> erhöht (vorher 4)</li>
+        <li>Support-Skill-Slot-Limit auf <strong>8</strong> erhöht (vorher 4)</li>
+        <li>Support-Skill-Toggle-Logik optimiert</li>
+        <li>Auto-Cast + Auto-Shadow-Cast im Support-Slot hinzugefügt</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🏆 Tier-List: Welche Klassen sind am besten zum Auto-Hunt?</h2>
+      <p>Ranking basiert auf: 1) Skill-/SP-Sustain ohne manuellen Eingriff, 2) Target-Acquisition im 7–8-Zellen-Radius, 3) Robustheit gegen die Auto-Hunt-Eigenheiten (Nach-Kill-Pause, Nearest-Only, fehlender Auto-Pot).</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h4>🥇 S-Tier (1. Job)</h4>
+          <p><strong>Archer</strong> — <em>der "Version's Child"</em></p>
+          <p>Double Strafe = ein Skill, ein Ziel, kein Combo. Ranged → bricht aus Nahkampf-Radius aus, bevor Damage reinkommt. SP-Kosten niedrig genug dass ein Blue Potion alle 5s reicht. Nur Ausgabe: Arrows im Inventar.</p>
+          <p><strong>Setup:</strong> DS Lv 10 in Slot 1, Owl's Eye passiv, Fire/Silver Arrows für Element-Coverage.</p>
+        </div>
+        <div class="card">
+          <h4>🥇 S-Tier (1. Job)</h4>
+          <p><strong>Mage</strong> — single-target Bolt</p>
+          <p>Cold/Fire/Lightning Bolt als Single-Target-Skill ist stabil auto-hunt-tauglich. Wichtig: pick ONE Bolt, nicht mehrere im Attack-Slot (Auto-Hunt macht sonst Element-Chaos).</p>
+          <p><strong>Setup:</strong> Ein Bolt-Typ max, Fire Wall bei Bedarf im Support-Slot. INT-Gear für SP-Pool.</p>
+        </div>
+        <div class="card">
+          <h4>🥈 A-Tier (1. Job)</h4>
+          <p><strong>Swordsman</strong> — Bash spammer</p>
+          <p>Bash Lv 10 + Magnum Break als Clear-Support funktioniert. HP-Regen ausreichend für moderate Mobs. Problem: Nearest-Only ignoriert Aggro-Mechaniken, Crowd-Situationen führen zu Deaths.</p>
+          <p><strong>Setup:</strong> Bash als Attack-Slot 1, Endure + Provoke als Support-Slots.</p>
+        </div>
+        <div class="card">
+          <h4>🥈 A-Tier (1. Job)</h4>
+          <p><strong>Acolyte</strong> — Heal-Bomb vs Undead</p>
+          <p>Heal auf Undead Gear-Mobs ist starker Auto-Hunt-Trick. Aber: nur in Undead-Maps effektiv (GH Culvert, Payon Cave). Nicht universell.</p>
+          <p><strong>Setup:</strong> Heal Lv 10 im Attack-Slot, Blessing + Inc Agi auf Timer im Support-Slot.</p>
+        </div>
+        <div class="card">
+          <h4>🥉 B-Tier (1. Job)</h4>
+          <p><strong>Merchant</strong> — Mammonite</p>
+          <p>Funktioniert, kostet aber kontinuierlich Zeny (900z/Cast bei Lv 10). Cart Revolution als AoE-Clear-Backup.</p>
+          <p><strong>Wichtig:</strong> Auto-Hunt kann Cart-Attack-Skill versehentlich triggern. Cart-Attack-Slot auf <strong>999 Sek</strong> setzen wenn du es nicht willst.</p>
+        </div>
+        <div class="card">
+          <h4>🥉 B-Tier (1. Job)</h4>
+          <p><strong>Thief</strong> — Double Attack Spam</p>
+          <p>Double Attack Passive + Normal-Attack-Toggle an. Einfach, aber melee-fragil. Detoxify + Envenom als Support.</p>
+        </div>
+      </div>
+
+      <h3>📊 Übersichtstabelle 1. Job</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Klasse</th><th>Tier</th><th>Stärken</th><th>Schwächen</th></tr></thead>
+        <tbody>
+          <tr><td>Archer</td><td>S</td><td>Ranged, ein Skill-Loop, low-SP, Arrow-Sustain</td><td>Arrow-Kosten</td></tr>
+          <tr><td>Mage</td><td>S</td><td>Single-Bolt stabil, INT-Gear macht SP-Pool</td><td>Mehrere Bolts = Element-Chaos</td></tr>
+          <tr><td>Swordsman</td><td>A</td><td>HP-Regen, Bash einfach</td><td>Nearest-Only macht Crowd fatal</td></tr>
+          <tr><td>Acolyte</td><td>A (Undead-spec)</td><td>Heal-Bomb in Undead-Maps extrem gut</td><td>Map-restricted (nur Undead)</td></tr>
+          <tr><td>Merchant</td><td>B</td><td>Greed vacuumt Loot</td><td>Mammonite-Zeny-Kosten, Cart-Attack-Triggers</td></tr>
+          <tr><td>Thief</td><td>B</td><td>Simple Double-Attack-Loop</td><td>Melee-Fragilität</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <hr>
+
+      <h2>🏆 Tier-List: 2. Job</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h4>🥇 S+ Tier</h4>
+          <p><strong>Knight — "Pierce Machine"</strong></p>
+          <p>Der Midgard-Academy-Build explizit für Auto-Hunt designed. STR 80–90 + <strong>INT 40–60</strong> für SP-Sustain = Pierce spammt sich dauerhaft ohne SP-Pots. Mit Zero Beetle Card (SP-Recovery-on-Kill) läuft der Char stundenlang.</p>
+          <p><strong>Setup:</strong> Pierce Lv 10 im Attack-Slot 1 (mit 0.3–0.5s Skill-Delay), Two-Hand Quicken auf Timer (Support). Eden Spear III + Zero Beetle Card Pflicht.</p>
+        </div>
+        <div class="card">
+          <h4>🥇 S-Tier</h4>
+          <p><strong>Hunter — "Double Strafe Sniper"</strong></p>
+          <p>Fortsetzung des Archer-Spiels. DEX 99 + AGI 90 → Double Strafe spammt mit hohem ASPD. Falcon-Trigger als AoE-Bonus. <strong>Apple o' Archer</strong> + <strong>Zerom-Card-Gloves</strong> (+3 DEX/Slot) sind Auto-Hunt-BiS.</p>
+          <p><strong>Setup:</strong> DS Lv 10, Owl's Eye passiv, Ankle Snare im Support-Slot für Emergencies.</p>
+        </div>
+        <div class="card">
+          <h4>🥇 S-Tier</h4>
+          <p><strong>Sage — "Auto-Spell Battle Tome"</strong></p>
+          <p>Die wortwörtlich perfekte Auto-Hunt-Klasse. Auto-Spell triggert Bolts bei Normal-Attack = kein manuelles Skill-Timing nötig, einfach Auto-Attack-Toggle an und warten. Free Cast erlaubt Move während Cast.</p>
+          <p><strong>Setup:</strong> Normal Attack ON + Auto-Spell im Support-Slot. Siroma (Water) oder Imp (Fire) Cards. Dazu matching Endow-Skill.</p>
+        </div>
+        <div class="card">
+          <h4>🥇 S-Tier</h4>
+          <p><strong>Wizard — "AoE Destruction"</strong></p>
+          <p>Storm Gust / Meteor Storm / LoV clear ganze Mobs auf einmal. Problem: LoV CD 8s, SG Freeze-Rate bei Lv 10 niedriger. Best für Maps mit dichten Mob-Spawns.</p>
+          <p><strong>Setup:</strong> Storm Gust als Main-Skill (Attack-Slot 1), Fire Wall bei Bedarf. <strong>Bekannter Bug:</strong> Nach Single-Skill-Trigger picked Wizard gelegentlich keine Items auf.</p>
+        </div>
+        <div class="card">
+          <h4>🥇 S-Tier</h4>
+          <p><strong>Priest — "Full-Support Solo"</strong></p>
+          <p>Magnificat verdoppelt SP-Regen = Sanctuary dauerhaft spammbar. In Undead/Demon-Maps (GH Churchyard, Payon Cave) ist Priest praktisch unverwundbar. Außerhalb dieser Maps: nur mittelmäßig.</p>
+          <p><strong>Setup:</strong> Magnificat dauerhaft Support-Slot, Heal auf Self, Holy Light Attack-Slot 1, Aspersio auf Weapon.</p>
+        </div>
+        <div class="card">
+          <h4>🥈 A-Tier</h4>
+          <p><strong>Blacksmith — "Battle-Greed"</strong></p>
+          <p>Mammonite + Cart Revolution + Adrenaline Rush. Greed Lv 1 = Loot-Vakuum (massive QoL). Mammonite-Zeny-Kosten sind substantiell — nur rentabel auf Zeny-positive Maps.</p>
+          <p><strong>Setup:</strong> Mammonite in Attack-Slot 1, Greed-Macro auf Timer, Adrenaline Rush im Support-Slot.</p>
+        </div>
+        <div class="card">
+          <h4>🥈 A-Tier</h4>
+          <p><strong>Assassin — "Double Dagger"</strong></p>
+          <p>Dual-Dagger + Double Attack passive + Normal-Attack ON = effizientes AFK-Farming. Sonic Blow auf Auto-Hunt weniger effektiv (SP-Drain).</p>
+          <p><strong>Setup:</strong> Normal Attack ON, Double Attack passiv, Cloaking Lv 3 als Emergency-Support.</p>
+        </div>
+        <div class="card">
+          <h4>🥈 A-Tier</h4>
+          <p><strong>Rogue — "Gank Evasion"</strong></p>
+          <p>High-AGI + Gank (passive Steal) + Whisper-Card-Cloak = sehr hohe Flee. Viele Mobs verfehlen einfach. Lang-Sessions bei niedriger Death-Rate möglich.</p>
+          <p><strong>Setup:</strong> Normal Attack ON, Gank passiv, Tunnel Drive für Speed.</p>
+        </div>
+        <div class="card">
+          <h4>🥉 B-Tier</h4>
+          <p><strong>Crusader</strong></p>
+          <p>Grand Cross hat Self-Damage-Risiko — ohne Pupa/Angeling Card und mit Auto-Hunts „warte nicht auf Heal"-Logik oft Deaths. Heal Lv 5 + Faith Lv 10 als Sustain.</p>
+          <p><strong>Alternative:</strong> Holy Cross + Shield als Spear-Combo für sichereres Farming.</p>
+        </div>
+        <div class="card">
+          <h4>🥉 B-Tier</h4>
+          <p><strong>Alchemist — "Homunculus Tank"</strong></p>
+          <p>Homunculus (Vanilmirth) tankt, Player stands back. <strong>Cart-Attack-Skill auf 999 Sek</strong> setzen damit der Alche nicht selbst chargt. Homunculus-AI besser als Auto-Hunt-AI (sieht Mobs weiter).</p>
+          <p><strong>Setup:</strong> Call Homunculus aktiv, Normal Attack AUS, Learning Potion passiv, Cart Attack disabled.</p>
+        </div>
+        <div class="card">
+          <h4>❌ D-Tier</h4>
+          <p><strong>Monk</strong> — defekte Combo-Logik</p>
+          <p>Bahamut-Thread 3035 dokumentiert: Monk-Combos werden von Auto-Hunt falsch gehandhabt. Triple Attack verbraucht Spirit Spheres unvorhersagbar, wodurch Finger Offensive / Chain Combo oft ohne benötigte Bubbles laufen. GRAVITY hat bestätigt dass das als "nicht ein Bug, sondern normales Verhalten" gilt — Monk-Main-Autohunter sind sauer.</p>
+          <p>Workaround: Nur <strong>Triple Attack + Iron Fists</strong> Combo-frei spielen. Combo-Skills manuell.</p>
+        </div>
+        <div class="card">
+          <h4>❌ D-Tier</h4>
+          <p><strong>Bard / Dancer</strong></p>
+          <p>Support-Klassen — Bragi/Service sind Gruppen-Skills, kein solo-Farming-Profil. Battle-Build (Arrow Vulcan) möglich, aber Hunter macht das besser.</p>
+        </div>
+      </div>
+
+      <h3>📊 Übersichtstabelle 2. Job</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Klasse</th><th>Tier</th><th>Warum</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Knight (Pierce Machine)</strong></td><td>S+</td><td>INT-Build speziell für Auto-Hunt-Sustain designt, Zero Beetle Card Sync</td></tr>
+          <tr><td>Hunter</td><td>S</td><td>Ranged, simpel, niedrige Death-Rate</td></tr>
+          <tr><td>Sage (Auto-Spell)</td><td>S</td><td>Auto-Cast-Mechanik perfekt für Auto-Hunt</td></tr>
+          <tr><td>Wizard</td><td>S</td><td>AoE-Clear, aber Pickup-Bug beachten</td></tr>
+          <tr><td>Priest</td><td>S (Undead)</td><td>Magnificat + Sanctuary, map-abhängig</td></tr>
+          <tr><td>Blacksmith</td><td>A</td><td>Greed + Mammonite (Zeny-Kosten)</td></tr>
+          <tr><td>Assassin</td><td>A</td><td>Double-Dagger AFK, kein Sonic-Blow-Spam</td></tr>
+          <tr><td>Rogue</td><td>A</td><td>High-Flee Evasion-Tank</td></tr>
+          <tr><td>Crusader</td><td>B</td><td>Grand-Cross-Self-Damage riskant</td></tr>
+          <tr><td>Alchemist</td><td>B</td><td>Homunculus farmt, aber Cart-Attack-Bug</td></tr>
+          <tr><td>Monk</td><td>D</td><td>Combo-Logik broken (Bahamut #3035)</td></tr>
+          <tr><td>Bard/Dancer</td><td>D</td><td>Support-Klasse, solo schwach</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>💡 Empfehlung für Auto-Hunt-Hauptchars</h3>
+      <ul>
+        <li><strong>Erster Char / Zeny-Farmer:</strong> <em>Hunter</em> — simpler Auto-Hunt, niedrige Death-Rate, sammelt Zeny + XP</li>
+        <li><strong>Long-Session-AFK:</strong> <em>Knight Pierce Machine</em> — das beste Sustain-Profil (INT+Beetle Card), Stunden-lange Sessions realistisch</li>
+        <li><strong>"Ich will gar nichts tun"-Spieler:</strong> <em>Sage Auto-Spell</em> — Auto-Attack → Spells triggern sich selbst</li>
+        <li><strong>Zeny-Farm mit Loot:</strong> <em>Blacksmith</em> — Greed sammelt, Mammonite killt</li>
+        <li><strong>Undead/Demon-Maps (GH):</strong> <em>Priest Heal-Bomb</em> — fast unverwundbar</li>
+      </ul>
+
+      <div class="info-box warning">
+        <strong>Vermeiden für Auto-Hunt-Hauptchar:</strong> Monk (Combo-Bug), Crusader (Grand-Cross-Recoil), Bard/Dancer (Support, solo schwach). Bei Wizard ist der Pickup-Bug zu beachten — gelegentlich liegen Drops liegen.
+      </div>
+    </section>
+
+    <section>
+      <h2>🔮 Was die Community fordert (Potenzial für Global)</h2>
+      <p>Mehrere Bahamut-Threads listen die häufigsten Auto-Hunt-Wünsche auf. Falls Global diese umsetzt, wird das System deutlich mächtiger:</p>
+      <ul>
+        <li><strong>Threshold-basierter Auto-Pot</strong> (HP/SP % → automatisch trinken) — die Top-Forderung</li>
+        <li>Erhöhung Support-Skill-Slots auf 10+ (aktuelle 8 reichen bei vielen Buff-stackenden Klassen nicht)</li>
+        <li>„Buff ausgelaufen → sofort neu" statt „Timer abgelaufen → bei nächstem Mob"</li>
+        <li>Target-Prioritäts-Liste (Elemental-Match statt Nearest-Only)</li>
+        <li>Erhöhung Search-Range über 7–8 Zellen hinaus</li>
+        <li>Automatisches Town-Portal/Fly-Wing bei niedrigem HP (aktuell erst wenn Pots aus)</li>
+        <li>Auto-Storage / Auto-Sell bei vollem Inventar</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>✅ TL;DR — was du jetzt weißt</h2>
+      <ul>
+        <li><strong>Auto-Hunt:</strong> Ja, robust, 8+8 Slots seit März 2026</li>
+        <li><strong>Auto-Pot-by-Threshold:</strong> Nein, gibt es nicht. Community fordert es aktiv</li>
+        <li><strong>Workaround:</strong> Potions in Support-Slots mit Timer, Class-Sustain-Gear, Pot-Rotations-Staffel</li>
+        <li><strong>Target:</strong> Nearest-Only, Range 7–8 Zellen, kein Override</li>
+        <li><strong>Death:</strong> Keine Auto-Recovery, Char bleibt am Death-Screen</li>
+        <li><strong>PvP:</strong> Auto-Hunt deaktiviert</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  Quellen: <a href="https://www.midgardhub.com/" target="_blank">Midgard Hub</a> · <a href="https://old.criatura-academy.com/" target="_blank">Criatura Academy</a> · <a href="https://wiki.playragnarokzero.com/" target="_blank">Project Zero Wiki</a> · <a href="https://www.rozskill.me/" target="_blank">rozskill.me</a>
+</footer>
+
+</body>
+</html>

@@ -513,6 +513,53 @@ tr:hover td { background: rgba(245,185,66,0.04); }
 .grade-ii { background: linear-gradient(135deg, #dcb6ee, #c08fd8); }
 .grade-i { background: linear-gradient(135deg, #ffb069, #ff8533); }
 
+/* ─── Screenshot gallery ─── */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 20px 0 8px;
+}
+.screenshot-grid figure {
+  margin: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all .2s ease;
+}
+.screenshot-grid figure:hover {
+  border-color: rgba(245,185,66,0.35);
+  transform: translateY(-2px);
+}
+.screenshot-grid figure a {
+  display: block;
+  background: #0c0f14;
+  border: 0;
+}
+.screenshot-grid figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: crisp-edges;
+}
+.screenshot-grid figcaption {
+  padding: 10px 14px;
+  font-size: 12.5px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  border-top: 1px solid var(--border);
+}
+.screenshot-grid figcaption strong {
+  color: var(--text);
+  font-weight: 700;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
 /* ─── Footer ─── */
 .footer {
   border-top: 1px solid var(--border);

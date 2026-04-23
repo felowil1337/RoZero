@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zufalls-Optionen — RO Zero Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-title">Ragnarok Zero</span>
+      <span class="brand-subtitle">Global Guide · Deutsch</span>
+    </a>
+    <nav class="topbar-links">
+      <a href="index.html">Start</a>
+      <a href="klassen.html" class="">Klassen</a>
+      <a href="leveling.html" class="">Leveln</a>
+      <a href="instanzen.html" class="">Instanzen</a>
+      <a href="fever.html" class="">Fever</a>
+      <a href="ausruestung.html" class="">Ausrüstung</a>
+      <a href="zukunft.html" class="future">Zukunft</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li class="nav-group-label info">Start</li>
+        <li><a href="index.html" class=""><span class="emoji">📘</span>Einführung</a></li>
+        <li><a href="auto-hunt.html"><span class="emoji">🤖</span>Auto-Hunt &amp; Auto-Pot</a></li>
+        <li><a href="taiwan.html" class=""><span class="emoji">🇹🇼</span>Taiwan-Version</a></li>
+
+        <li class="nav-group-label now">Aktuell spielbar</li>
+        <li><a href="klassen.html" class=""><span class="emoji">⚔️</span>Klassen (1./2. Job)</a></li>
+        <li><a href="leveling.html" class=""><span class="emoji">📈</span>Level-Routen</a></li>
+        <li><a href="instanzen.html" class=""><span class="emoji">🏰</span>Memorial-Dungeons</a></li>
+        <li><a href="fever.html" class=""><span class="emoji">🔥</span>Fever-Felder</a></li>
+        <li><a href="optionen.html" class=" active"><span class="emoji">🎲</span>Zufalls-Optionen</a></li>
+        <li><a href="ausruestung.html" class=""><span class="emoji">🛡️</span>Ausrüstung</a></li>
+        <li><a href="npc.html" class=""><span class="emoji">💰</span>NPC-Händler</a></li>
+
+        <li class="nav-group-label future">Zukunfts-Updates</li>
+        <li><a href="zukunft.html" class=""><span class="emoji">🔮</span>Übersicht</a></li>
+        <li><a href="trans-klassen.html" class=""><span class="emoji">⚡</span>Trans-Klassen</a></li>
+        <li><a href="high-instanzen.html" class=""><span class="emoji">🏰</span>High-Lv Instanzen</a></li>
+        <li><a href="endgame-ausruestung.html" class=""><span class="emoji">🛡️</span>Endgame-Ausrüstung</a></li>
+        <li><a href="stern-grade.html" class=""><span class="emoji">⭐</span>Stern-Grade-System</a></li>
+        <li><a href="endgame-npc.html" class=""><span class="emoji">💰</span>Endgame-Währungen</a></li>
+
+        <li class="nav-group-label info">Links</li>
+        <li><a href="quellen.html" class=""><span class="emoji">🔗</span>Quellen</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="page-hero">
+      <span class="eyebrow">System · Aktuell spielbar</span>
+      <h1>Zufalls-Optionen (Random Options)</h1>
+      <p class="lead">Komplette Wertetabellen für alle Tiers (Mob-Level 1-99 + Boss + Fever) plus Einbroch-Permits, Soutane-Set-Enchants und Regional-Weapon-Rerolls.</p>
+    </div>
+
+    <section>
+      <h2>🎲 Zufalls-Optionen (Random Options) — System</h2>
+      <p>Monster in Zero können Waffen/Rüstungen mit <strong>Zufalls-Optionen</strong> droppen. Anzahl und Qualität skalieren mit Monster-Level und -Typ.</p>
+      <div class="info-box note">
+        <strong>Berechnung:</strong><br>
+        • <code>ATK +X</code> = WeaponAtk + X (flat)<br>
+        • <code>ATK +X%</code> = WeaponAtk × (1 + X/100) — multiplikativ<br>
+        • <code>MATK +X%</code> = (StatusMATK + EquipMATK) × (1 + X/100)<br>
+        <em>Zwei 5%-Optionen sind effektiv stärker als eine einzelne 10%-Option.</em>
+      </div>
+    </section>
+
+    <section>
+      <h2>📊 Weapon-Options nach Monster-Level</h2>
+
+      <h3>Monster Lv 1–20 (1 Option)</h3>
+      <ul>
+        <li><strong>Melee:</strong> STR/AGI/VIT/DEX/LUK 1–3 · MaxHP 100–300 · ATK 10–20 · ATK% 1–5 · ASPD% 5–10 · HIT/FLEE 5–20 · CRIT 3–6</li>
+        <li><strong>Ranged:</strong> + Ranged Damage% 3–5</li>
+        <li><strong>Magic:</strong> INT 1–3 · MATK 10–20 · MATK gegen Element 5–10% · Heal Amount% 3–5 · VCT-Reduction 3–5%</li>
+      </ul>
+
+      <h3>Monster Lv 21–40 (1 Option)</h3>
+      <ul>
+        <li>Stats 1–4 · ATK/MATK 20–50 · ATK%/MATK% 5–10 · ASPD% 7–15 · HIT/FLEE 10–30 · Crit-Damage 10–20% · ATK gegen Size 5–15</li>
+      </ul>
+
+      <h3>Monster Lv 41–60 (2 Options)</h3>
+      <p><strong>Option 1:</strong> Stats 1–5 · ATK 20–50 · ATK gegen Size 10–20 · Crit-Damage 10–20%</p>
+      <p><strong>Option 2:</strong> ATK gegen Element/Race 10–20% · <strong>Indestructible Weapon</strong></p>
+
+      <h3>Monster Lv 61–99 (2 Options) — Pre-Boss-Tier</h3>
+      <p><strong>Option 1:</strong> Stats 1–6 · MaxHP 100–500 · ATK 20–60 · ATK% 5–12 · ASPD% 7–18 · CRIT 5–12 · Crit-Damage 10–24 · ATK gegen Size 10–25</p>
+      <p><strong>Option 2:</strong> ATK gegen Element/Race 10–25%</p>
+
+      <h3>Boss-Monsters (3 Options) — Highest-Tier pre-Fever</h3>
+      <p><strong>Option 1:</strong> All Stats 1–4</p>
+      <p><strong>Option 2:</strong> ATK 5–15 · ASPD% 4–12 · Crit-Dmg 3–9 · ATK gegen Element/Race 3–9%</p>
+      <p><strong>Option 3:</strong> MaxHP 60–180 · MaxHP% 2–6 · MaxSP 20–60 · After-Cast-Delay −3–9% · SP-Cost −1–3% · Chance ignore DEF/MDEF 3–9% · Property Conversion (Water/Fire/Earth/Wind/Holy/Shadow/Ghost/Undead) · Indestructible · Remove Size Penalty</p>
+
+      <h3>🔥 Fever-Dungeon-Monsters (4 Options) — Top-Tier</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Option</th><th>Werte</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>ATK/MATK 5–30 · ATK%/MATK% 1–5</td></tr>
+          <tr><td>2</td><td>HIT 5–20 · FLEE 10–20 · ASPD% 5–7 · Crit-Dmg 5–10% · ATK/MATK gegen Element 5–10% · VCT −5–10%</td></tr>
+          <tr><td>3</td><td>ATK/MATK gegen Race 5–10% · ATK gegen Normal/Boss 3–7% · Chance ignore DEF/MDEF 5–15%</td></tr>
+          <tr><td>4 (nur Fever-Boss!)</td><td>ATK 10–20 · ATK% 1–5 · ASPD 1–2 · alle Race/Element 5–10%</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛡️ Armor-Options</h2>
+
+      <h3>Champion-Monsters (1–2 Options)</h3>
+      <ul>
+        <li><strong>Armor:</strong> Stats 1–4 · MaxHP%/MaxSP% 3–7 · HP-Recovery 40–100 · MaxHP 200–500 · DEF 10–100 · Element-Resist 10–20%</li>
+        <li><strong>Garment:</strong> Reduce Weapon-ATK gegen Race 10–20%</li>
+        <li><strong>Shoes:</strong> CRIT-Rate gegen Race +10–20%</li>
+      </ul>
+
+      <h3>Fever-Armor (2–4 Options)</h3>
+      <p>Analog Fever-Weapon-Pool — MaxHP 150–350, MaxSP 25–50, HP%/SP% 1–5 auf Option 1.</p>
+    </section>
+
+    <section>
+      <h2>⚒️ Crafted-Blacksmith-Weapons</h2>
+      <p>Lv-3+-Waffen vom Blacksmith haben Options je nach Smith-Rank:</p>
+      <ul>
+        <li><strong>Non-Ranked Smith:</strong> 3 Options</li>
+        <li><strong>Ranked 6.–10.:</strong> 4 Options</li>
+        <li><strong>Ranked 1.–5.:</strong> 5 Options — max Quality</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>⚙️ Einbroch-Modification-Permits</h2>
+      <p>Einbroch-Weapons bekommen Options <strong>NICHT von Mob-Drops</strong>, sondern via NPC-Service.</p>
+      <ul>
+        <li><strong>NPC:</strong> <em>Field Inspector Rita</em> in <strong>Einbech</strong></li>
+        <li><strong>Permit-Kosten:</strong> 2× Dynites + 100.000 Zeny</li>
+        <li><strong>Permit-Typen:</strong> Physical (ID 9514) + Magical — 1:1 austauschbar</li>
+        <li><strong>Effekt:</strong> 1 Permit = frischer Roll von bis zu 3 Options. Option 1 garantiert, Options 2+3 random</li>
+        <li><strong>Reroll:</strong> Neuen Permit kaufen (Full-Reroll, kein Lock)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🐉 Regional-Weapon-Reroll (Kunlun/Louyang/Amatsu)</h2>
+      <p>Alle drei Regionen teilen den <strong>gleichen Random-Options-Pool</strong>. Pool-Split: Physical oder Magical (Spieler wählt). Option 1 garantiert, Option 2 nicht immer.</p>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Region</th><th>Reroll-Cost</th><th>Reroll-NPC</th></tr></thead>
+        <tbody>
+          <tr><td>Louyang</td><td>150.000 Zeny</td><td><code>/navi louyang 207/112</code></td></tr>
+          <tr><td>Amatsu</td><td>150.000 Zeny <em>oder</em> 1 Spirit Stone</td><td>Amatsu Town NPC</td></tr>
+          <tr><td>Kunlun</td><td>150.000 Zeny</td><td>Kunlun Town NPC</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="info-box warning">
+        <strong>KEIN Lock-Service in Zero!</strong> Rerolling ist immer Full-Reroll. Refine-Level + Cards bleiben erhalten.
+      </div>
+    </section>
+
+    <section>
+      <h2>🧥 Soutane-Set (Hugel)</h2>
+      <p>Das Soutane-Set hat 6 Stat-Varianten (STR/AGI/VIT/INT/DEX/LUK). Armor + matching Garment + Shoes. Slot 1 = Card, Slots 2/3/4 = Enchants. Slot 2 bekommt Special-Enchant nur bei +9+.</p>
+      <ul>
+        <li><strong>Enchant-NPC:</strong> <em>Susan Grey</em> @ <code>que_bingo 46,80</code> (2F Hugel Weapon Building)</li>
+        <li><strong>Cost &lt;+9:</strong> 1× Angel's Dream + 5× Rune of Darkness + 5× Soft Feather</li>
+        <li><strong>Cost +9+:</strong> 250.000 Zeny ODER 1 Daily Coin (unlockt bessere Slot-2-Specials)</li>
+        <li><strong>Reset:</strong> 200.000 Zeny</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Visual-ID</h2>
+      <ul>
+        <li>Tooltip: Random Options stehen zwischen Item-Info-Block und Card-Info-Block</li>
+        <li><strong>Pillar-of-Light-Farbe</strong> beim Ground-Drop zeigt Option-Anzahl — Quick-Visual-ID für 3- vs. 4-Option-Drops ohne aufheben</li>
+        <li>Options bleiben beim Refining/Grading <strong>erhalten</strong></li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  Quellen: <a href="https://www.midgardhub.com/" target="_blank">Midgard Hub</a> · <a href="https://old.criatura-academy.com/" target="_blank">Criatura Academy</a> · <a href="https://wiki.playragnarokzero.com/" target="_blank">Project Zero Wiki</a> · <a href="https://www.rozskill.me/" target="_blank">rozskill.me</a>
+</footer>
+
+</body>
+</html>

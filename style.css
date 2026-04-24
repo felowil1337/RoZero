@@ -137,10 +137,6 @@ body {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 24px 0;
-  position: sticky;
-  top: 16px;
-  max-height: calc(100vh - 32px);
-  overflow-y: auto;
 }
 .nav-group-label {
   padding: 16px 24px 6px;

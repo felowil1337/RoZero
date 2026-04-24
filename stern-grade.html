@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stern-Grade-System — RO Zero Guide</title>
+<title>Aktivierungs-System (★ / ★★) — RO Zero Guide</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,60 +16,189 @@
     </a>
     <nav class="topbar-links">
       <a href="index.html">Start</a>
-      <a href="klassen.html" class="">Klassen</a>
-      <a href="leveling.html" class="">Leveln</a>
-      <a href="instanzen.html" class="">Instanzen</a>
-      <a href="fever.html" class="">Fever</a>
-      <a href="ausruestung.html" class="">Ausrüstung</a>
-      <a href="zukunft.html" class="future active">Zukunft</a>
+      <a href="klassen.html">Klassen</a>
+      <a href="leveling.html">Leveln</a>
+      <a href="instanzen.html">Instanzen</a>
+      <a href="fever.html">Fever</a>
+      <a href="ausruestung.html">Ausrüstung</a>
+      <a href="stern-grade.html" class="active">Systeme</a>
+      <a href="zukunft.html" class="future">Zukunft</a>
     </nav>
   </div>
 </header>
 
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
 <div class="layout">
+  <label for="nav-toggle" class="nav-toggle-label">Navigation</label>
   <aside class="sidebar">
     <nav>
       <ul>
         <li class="nav-group-label info">Start</li>
-        <li><a href="index.html" class=""><span class="emoji">📘</span>Einführung</a></li>
+        <li><a href="index.html"><span class="emoji">📘</span>Einführung</a></li>
         <li><a href="auto-hunt.html"><span class="emoji">🤖</span>Auto-Hunt &amp; Auto-Pot</a></li>
-        <li><a href="taiwan.html" class=""><span class="emoji">🇹🇼</span>Taiwan-Version</a></li>
-
+        <li><a href="taiwan.html"><span class="emoji">🇹🇼</span>Taiwan-Version</a></li>
+  
         <li class="nav-group-label now">Aktuell spielbar</li>
-        <li><a href="klassen.html" class=""><span class="emoji">⚔️</span>Klassen (1./2. Job)</a></li>
-        <li><a href="leveling.html" class=""><span class="emoji">📈</span>Level-Routen</a></li>
-        <li><a href="exp.html" class=""><span class="emoji">📊</span>EXP-Tabelle</a></li>
-        <li><a href="instanzen.html" class=""><span class="emoji">🏰</span>Memorial-Dungeons</a></li>
-        <li><a href="fever.html" class=""><span class="emoji">🔥</span>Fever-Felder</a></li>
-        <li><a href="optionen.html" class=""><span class="emoji">🎲</span>Zufalls-Optionen</a></li>
-        <li><a href="ausruestung.html" class=""><span class="emoji">🛡️</span>Ausrüstung</a></li>
-        <li><a href="npc.html" class=""><span class="emoji">💰</span>NPC-Händler</a></li>
-        <li><a href="mvp.html" class=""><span class="emoji">👹</span>MVP (Paradise)</a></li>
-
+        <li><a href="klassen.html"><span class="emoji">⚔️</span>Klassen (1./2. Job)</a></li>
+        <li><a href="leveling.html"><span class="emoji">📈</span>Level-Routen</a></li>
+        <li><a href="instanzen.html"><span class="emoji">🏰</span>Memorial-Dungeons</a></li>
+        <li><a href="fever.html"><span class="emoji">🔥</span>Fever-Felder</a></li>
+        <li><a href="optionen.html"><span class="emoji">🎲</span>Zufalls-Optionen</a></li>
+        <li><a href="ausruestung.html"><span class="emoji">🛡️</span>Ausrüstung</a></li>
+        <li><a href="kostueme.html"><span class="emoji">👗</span>Kostüme</a></li>
+        <li><a href="npc.html"><span class="emoji">💰</span>NPC-Händler</a></li>
+  
+        <li class="nav-group-label now">Offizielle Systeme</li>
+        <li><a href="stern-grade.html" class="active"><span class="emoji">⭐</span>Aktivierung (Stern)</a></li>
+        <li><a href="mvp.html"><span class="emoji">👹</span>MVP-System</a></li>
+        <li><a href="battle-doll.html"><span class="emoji">🎎</span>Kampfpuppen</a></li>
+        <li><a href="fishing.html"><span class="emoji">🎣</span>Angel-System</a></li>
+        <li><a href="pvp.html"><span class="emoji">⚔️</span>PvP-Karten</a></li>
+        <li><a href="relikte.html"><span class="emoji">🔮</span>Reliquien</a></li>
+  
         <li class="nav-group-label future">Zukunfts-Updates</li>
-        <li><a href="zukunft.html" class=""><span class="emoji">🔮</span>Übersicht</a></li>
-        <li><a href="trans-klassen.html" class=""><span class="emoji">⚡</span>Trans-Klassen</a></li>
-        <li><a href="high-instanzen.html" class=""><span class="emoji">🏰</span>High-Lv Instanzen</a></li>
-        <li><a href="endgame-ausruestung.html" class=""><span class="emoji">🛡️</span>Endgame-Ausrüstung</a></li>
-        <li><a href="stern-grade.html" class=" active future-page"><span class="emoji">⭐</span>Stern-Grade-System</a></li>
-        <li><a href="endgame-npc.html" class=""><span class="emoji">💰</span>Endgame-Währungen</a></li>
-
+        <li><a href="zukunft.html"><span class="emoji">🔮</span>Übersicht</a></li>
+        <li><a href="trans-klassen.html"><span class="emoji">⚡</span>Trans-Klassen</a></li>
+        <li><a href="high-instanzen.html"><span class="emoji">🏰</span>High-Lv Instanzen</a></li>
+        <li><a href="endgame-ausruestung.html"><span class="emoji">🛡️</span>Endgame-Ausrüstung</a></li>
+        <li><a href="endgame-npc.html"><span class="emoji">💰</span>Endgame-Währungen</a></li>
+  
         <li class="nav-group-label info">Links</li>
-        <li><a href="quellen.html" class=""><span class="emoji">🔗</span>Quellen</a></li>
+        <li><a href="quellen.html"><span class="emoji">🔗</span>Quellen</a></li>
       </ul>
     </nav>
   </aside>
 
   <main>
-    <div class="page-hero future">
-      <span class="eyebrow">Zukunft · Endgame</span>
-      <h1>Stern-Grade-Upgrade-System</h1>
-      <p class="lead">D/C/B/A Grading für Lv-5-Waffen und Lv-2-Rüstungen mit Etel-Materialien, Formeln, Erfolgsraten und Kosten-Statistik.</p>
+    <div class="page-hero">
+      <span class="eyebrow">特色系統 · 活化系統 (Aktivierung) · aktuell spielbar</span>
+      <h1>Aktivierungs-System ★ / ★★</h1>
+      <p class="lead">Das TW-live Upgrade-System, mit dem Monster-Drop-Waffen zu ★ und ★★ hochgestuft, und klassische Rüstungen mit Enchant-Slots ausgestattet werden. Plus: das zukünftige kRO Stern-Grade-System (D/C/B/A) weiter unten.</p>
     </div>
 
     <section>
-      <h2>⭐ Stern-Grade-Upgrade-System</h2>
-      <p>Das <strong>Grade-System</strong> ist ein separates Upgrade zusätzlich zum Refining. Nur anwendbar auf <strong>Level-5-Waffen und Level-2-Rüstungen</strong> — das heißt fast alles Endgame-Gear (Trans+).</p>
+      <span class="source-note">Offizielle Quelle: roz.gnjoy.com.tw · News ID 217787 (28.08.2025, seither mehrfach erweitert)</span>
+
+      <h2>⭐ Was ist Aktivierung (活化)?</h2>
+      <p><strong>Aktivierung</strong> ist das TW-live System, mit dem du <em>Monster-Drop-Ausrüstung</em> durch Material-Einreichung <strong>re-craftest</strong> — mit Erhalt bestehender Karten, Enchants und Zufalls-Optionen. Es gibt drei Aktivierungs-Zweige:</p>
+      <ul>
+        <li><strong>Stufe-2 ★ Waffen</strong> — einfache Re-Forge</li>
+        <li><strong>Stufe-2 ★★ Waffen</strong> — zweite Stufe (seit Patch 23.03.2026)</li>
+        <li><strong>Klassische Rüstungen</strong> — zwei Varianten: „Stabil" und „Intensiv" (激烈)</li>
+      </ul>
+
+      <div class="info-box note">
+        <strong>Stern-Regel (seit März 2026):</strong> Bei Refine ≥ <strong>+11</strong> schaltet jeder <strong>+2 Refine-Schritt</strong> eine zusätzliche Fähigkeit frei. Bei <strong>+19</strong> werden initiale negative Effekte vollständig kompensiert.
+      </div>
+    </section>
+
+    <section>
+      <h2>📍 Zwei NPCs in Prontera</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h4>Werkstatt-Lehrling Mingjia (工坊學徒 鳴家)</h4>
+          <p><strong>Position:</strong> <code>prontera 272 264</code></p>
+          <p><strong>Funktion:</strong> Token-Wechsler. Bringt Monster-Drop-Ausrüstung, erhalte <strong>★ Forging-Token</strong>; bringt bereits aktivierte Waffen, erhalte <strong>★★ Forging-Token</strong>.</p>
+        </div>
+        <div class="card">
+          <h4>Großvater Taodaozhai (叨叨齋爺爺)</h4>
+          <p><strong>Position:</strong> <code>prontera 272 260</code></p>
+          <p><strong>Funktion:</strong> Der eigentliche Aktivator. Öffnet das Aktivierungs-UI, wenn du die richtigen Materialien mitbringst.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧾 Materialien &amp; Regeln</h2>
+
+      <h3>Stufe-2 ★★ Waffen (seit März 2026)</h3>
+      <div class="card">
+        <p><strong>Regel:</strong> Refine-Wert -3 · Karten, Enchants, Zufalls-Optionen <span style="color:var(--green);">bleiben erhalten</span></p>
+        <p><strong>Material:</strong> <code>3× ★★-Forging-Token</code> + <code>30× Goblin-Splittermünzen (哥布靈碎幣)</code></p>
+      </div>
+
+      <h3>Stufe-2 ★ Waffen</h3>
+      <div class="card">
+        <p><strong>Regel:</strong> Refine-Wert -7 · Karten, Enchants, Zufalls-Optionen bleiben erhalten</p>
+        <p><strong>Material:</strong> <code>100× ★-Forging-Token</code> + <code>8× Goblin-Splittermünzen</code></p>
+      </div>
+
+      <h3>Klassische Rüstungen — „Stabil" (穩定)</h3>
+      <div class="card">
+        <p><strong>Regel:</strong> Refine-Wert -3 · Karten, Enchants, Zufalls-Optionen bleiben erhalten</p>
+        <p><strong>Material:</strong> <code>100× ★-Forging-Token</code> + <code>30× Goblin-Splittermünzen</code></p>
+      </div>
+
+      <h3>Klassische Rüstungen — „Intensiv" (激烈)</h3>
+      <div class="card">
+        <p><strong>Regel:</strong> Refine-Wert -7 · Karten, Enchants, Zufalls-Optionen bleiben erhalten</p>
+        <p><strong>Material:</strong> <code>10× ★-Forging-Token</code> + <code>3× Goblin-Splittermünzen</code></p>
+      </div>
+
+      <img class="chinese-img small" src="_assets/gnjoy/images/2025_08_25_25ed89815616449aaf521bf2138ffab9.png" alt="NPC Mingjia">
+      <span class="img-caption">Werkstatt-Lehrling Mingjia (prontera 272 264)</span>
+
+      <img class="chinese-img small" src="_assets/gnjoy/images/2025_08_25_085a5643b0504101b5123e9613353bf7.png" alt="NPC Taodaozhai">
+      <span class="img-caption">Großvater Taodaozhai (prontera 272 260)</span>
+
+      <img class="chinese-img medium" src="_assets/gnjoy/images/2025_08_25_4195af65c20b42029f708d9c27164188.png" alt="Aktivierungs-UI">
+      <span class="img-caption">Offizielles Aktivierungs-UI</span>
+    </section>
+
+    <section>
+      <h2>⚔️ Bereits aktivierbare Gruppen</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h4><a href="https://roz.gnjoy.com.tw/Notice/Notice_Info?id=217788" target="_blank">Stufe-2 ★ Waffen</a></h4>
+          <p>Der Launch-Pool, seit August 2025. Umfangreiche Waffen-Listen.</p>
+        </div>
+        <div class="card">
+          <h4><a href="https://roz.gnjoy.com.tw/Notice/Notice_Info?id=218272" target="_blank">Stufe-2 ★★ Waffen</a> <span class="badge red">NEW</span></h4>
+          <p>Seit Patch 23./24./31.03.2026 aktiv. Die „zweite Welle" mit stärkeren Boni an höheren Refine-Schwellen.</p>
+        </div>
+        <div class="card">
+          <h4><a href="https://roz.gnjoy.com.tw/Notice/Notice_Info?id=218186" target="_blank">Klassische Rüstungen</a></h4>
+          <p>Seit Patch Februar 2026. Beide Varianten (Stabil / Intensiv).</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔬 Aktivierbare Zufalls-Optionen</h2>
+      <p>Aktivierte Waffen können zusätzlich mit <em>Physischen und Magischen Magiekristall-Steinen</em> enchantet werden. Offizielle Option-Liste: <a href="https://roz.gnjoy.com.tw/Notice/Notice_Info?id=217789" target="_blank">二級★武器附加能力</a>.</p>
+    </section>
+
+    <section>
+      <h2>📊 ★★ Waffen — Stat-Übersichten</h2>
+      <p>Die konkreten Boni pro Waffe sind nur in offiziellen Screenshots dokumentiert (4 Wellen Patch-Updates). Kern-Grafiken:</p>
+
+      <img class="chinese-img" src="_assets/gnjoy/images/2026_03_23_5856b28c53084870a2d06b69b2079b59.png" alt="★★ Wave 1 Overview">
+      <img class="chinese-img" src="_assets/gnjoy/images/2026_03_23_11535e7e334545c09d4b7257cdfa0cd4.png" alt="★★ Wave 2">
+      <img class="chinese-img" src="_assets/gnjoy/images/2026_03_23_2c4cb794f0b34d1f8dea4553fe37ea88.png" alt="★★ Wave 3 (23.03.2026 Update)">
+      <img class="chinese-img" src="_assets/gnjoy/images/2026_03_31_13c496f7f0f84527b440c16516f2209d.png" alt="★★ Final 31.03.2026 Update">
+      <span class="img-caption">Alle 21 ★★ Waffen-Übersichten (wird später per nano-banana eingedeutscht)</span>
+    </section>
+
+    <section>
+      <h2>💡 Strategie-Empfehlungen</h2>
+      <ul>
+        <li><strong>Erst Refine, dann Aktivieren:</strong> Aktivierung reduziert Refine um -3 bis -7 — also erst auf +11 oder mehr refinen, dann aktivieren</li>
+        <li><strong>Goblin-Splittermünzen-Farm:</strong> Kernressource — Sourcing über aktuelle Events / Drop-Quests prüfen (variiert per Patch)</li>
+        <li><strong>★ vor ★★:</strong> Bereits aktivierte Waffe ist Voraussetzung für ★★-Upgrade. Plane die Materialkette</li>
+        <li><strong>Kein Cards/Enchants-Verlust:</strong> Anders als Refine-Break wird nichts zerstört — Aktivierung ist <em>risikoarm</em>, nur Refine-Wert fällt</li>
+        <li><strong>Kombiniere mit <a href="mvp.html">Schmied-Segen</a>:</strong> Nach Aktivierung das Refine wieder hoch bringen mit Schmied-Segen (kein Break bei +7–+12)</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <div class="info-box future">
+      <strong>Zukünftiges kRO-System: "Stellar Grade" (D/C/B/A).</strong> Ab hier: <em>kein</em> TW-live Content, sondern das was auf kRO Zero seit Dez 2024 läuft und vermutlich auf Global in späterer Phase kommt. Verwendet <em>Etel-Materialien</em> statt Forging-Tokens und upgradet Lv-5-Waffen/Lv-2-Rüstungen. Bleibt zur Referenz / Planung.
+    </div>
+
+    <section>
+      <h2>⭐ kRO-Stellar-Grade (Future)</h2>
+      <p>Das <strong>kRO Grade-System</strong> ist ein separates Upgrade zusätzlich zum Refining. Nur anwendbar auf <strong>Level-5-Waffen und Level-2-Rüstungen</strong> — das heißt fast alles Endgame-Gear (Trans+).</p>
 
       <div class="info-box future">
         <strong>Warum ist das Future?</strong> Lv-5-Weapons sind alle Trans-Class-gated. Etel Dust droppt nur von <strong>Lv 200+ Monstern</strong> (kRO Zero seit Dez 2024) — also ferne Zukunft für TWRoZ/Global.

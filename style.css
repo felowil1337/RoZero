@@ -560,6 +560,174 @@ img { max-width: 100%; height: auto; }
 }
 .source-note::before { content: "🇹🇼"; font-size: 10px; }
 
+/* ─── Jump-link to scraped archive at bottom of page ─── */
+a.jump-scraped {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(95,168,255,0.08);
+  color: var(--blue);
+  border: 1px solid rgba(95,168,255,0.28);
+  border-radius: 100px;
+  text-decoration: none;
+}
+a.jump-scraped:hover {
+  background: rgba(95,168,255,0.16);
+  border-color: var(--blue);
+  color: var(--text);
+}
+
+/* Scraped article dump (raw Chinese content, user-filterable) */
+.article-dump { margin-top: 60px; padding-top: 24px; border-top: 2px dashed var(--border); }
+.article-dump > h2 { color: var(--text-muted); }
+details.scraped-article {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+details.scraped-article > summary {
+  cursor: pointer;
+  padding: 10px 16px;
+  color: var(--text-dim);
+  font-size: 13.5px;
+  user-select: none;
+  border-radius: 10px;
+}
+details.scraped-article > summary:hover { color: var(--text); background: var(--bg-2); }
+details.scraped-article[open] > summary {
+  border-bottom: 1px solid var(--border-soft);
+  border-radius: 10px 10px 0 0;
+}
+details.scraped-article .scraped-body {
+  padding: 16px 20px 20px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+details.scraped-article .scraped-body img,
+details.scraped-article .scraped-body img.scraped-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 8px;
+  background: var(--bg-2);
+}
+details.scraped-article .scraped-body p { margin: 6px 0; }
+details.scraped-article .scraped-body ol,
+details.scraped-article .scraped-body ul { padding-left: 22px; }
+details.scraped-article .scraped-body h2,
+details.scraped-article .scraped-body h3 {
+  font-size: 16px;
+  color: var(--text);
+  border: 0;
+  padding: 0;
+  margin: 14px 0 6px;
+}
+details.scraped-article .scraped-body h2::after { display: none; }
+details.scraped-article .scraped-body table { margin: 8px 0; }
+
+/* Multi-tier section label inside translated-table */
+details.translated-table h5.tier-label {
+  margin: 16px 0 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(245,185,66,0.08);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+details.translated-table h5.tier-label:first-of-type { margin-top: 10px; }
+
+/* ─── Image gallery (compact grid for catalog-style content) ─── */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin: 16px 0 24px;
+}
+.image-gallery figure {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.image-gallery figure:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245,185,66,0.4);
+}
+.image-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg-1);
+}
+.image-gallery figcaption {
+  padding: 6px 10px;
+  font-size: 11px;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border-soft);
+  background: var(--bg-1);
+  text-align: center;
+  min-height: 24px;
+}
+
+/* Wider gallery variant for UI screenshots / tables */
+.image-gallery.wide {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Readable gallery — single column for dense stat tables / weapon cards */
+.image-gallery.readable {
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image-gallery.readable figure { border-radius: 10px; }
+.image-gallery.readable figcaption { padding: 8px 12px; font-size: 12px; }
+
+/* Auto-translated table (Gemini-extracted) */
+details.translated-table {
+  margin: 8px 0 24px;
+  padding: 10px 14px;
+  background: rgba(95,168,255,0.04);
+  border: 1px solid rgba(95,168,255,0.25);
+  border-radius: 10px;
+  font-size: 13px;
+}
+details.translated-table > summary {
+  cursor: pointer;
+  color: var(--blue);
+  font-weight: 600;
+  padding: 4px 0;
+  user-select: none;
+}
+details.translated-table > summary:hover { color: var(--accent); }
+details.translated-table[open] > summary { margin-bottom: 10px; }
+details.translated-table .translated-summary {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin: 8px 0;
+}
+details.translated-table .translated-notes {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin: 10px 0 4px;
+  font-style: italic;
+}
+details.translated-table table { font-size: 12.5px; }
+details.translated-table th, details.translated-table td { padding: 6px 10px; }
+
 /* ─── Mobile nav toggle (CSS-only, hamburger) ─── */
 .nav-toggle { position: absolute; left: -9999px; opacity: 0; }
 .nav-toggle-label {
